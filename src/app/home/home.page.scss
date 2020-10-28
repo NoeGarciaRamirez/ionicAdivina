@@ -1,0 +1,115 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+//Con id en html se pone # en css, y con class se pone .
+
+// Si la pantalla no <600 ni >1090
+#boton {
+  --background: rgb(167, 0, 182);
+  --color: rgb(255, 255, 255);
+  --color-activated: rgb(0, 0, 0);
+}
+#body {
+  --ion-background-color: rgb(10, 9, 78);
+}
+#titulo {
+  visibility: hidden;
+  --color: rgb(255, 255, 0);
+}
+#parrafo {
+  font-family: arial;
+  color: rgb(255, 0, 0);
+}
+#titulo2 {
+  --color: rgb(0, 0, 0);
+}
+#introduce {
+  --color: rgb(0, 119, 255);
+}
+
+
+// Menos de 600px poner pantalla azul
+@media screen and (max-width: 600px) {
+  #boton {
+    --background: lightgreen;
+    --color: black;
+    --color-activated: red;
+  }
+  #body {
+    --ion-background-color: lightblue;
+  }
+  #titulo {
+    visibility: hidden;
+    --color: rgb(0, 255, 0);
+  }
+  #titulo2 {
+    --color: rgb(255, 0, 0);
+  }
+  #parrafo {
+    font-family: arial;
+  }
+}
+
+
+// Más de 1090px
+@media screen and (min-width: 1090px) {
+  #boton {
+    --background: rgb(145, 49, 49);
+    --color: rgb(238, 255, 0);
+    --color-activated: rgb(83, 0, 94);
+  }
+  #body {
+    --ion-background-color: black;
+  }
+  #titulo {
+    visibility: hidden;
+    --color: rgb(0, 204, 255);
+  }
+  #titulo2 {
+    --color: rgb(0, 204, 255);
+  }
+  #parrafo {
+    font-family: arial;
+    color: white;
+  }
+  #introduce {
+    --color: white;
+  }
+}
+
+@media screen and (orientation: landscape){
+
+  #titulo {
+    visibility: visible;
+    --color: rgb(0, 255, 21);
+  }
+
+  #titulo2 {
+    visibility: hidden;
+    --color: rgb(86, 121, 42);
+  }
+}
